@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Užduočių valdymo sistema</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Užduočių valdymo sistema</h1>
+
+    <div class="filter-buttons">
+        <button onclick="filterTasks('ALL')">ALL</button>
+        <button onclick="filterTasks('A')">Group A</button>
+        <button onclick="filterTasks('B')">Group B</button>
+        <button onclick="filterTasks('C')">Group C</button>
+    </div>
+
+    <form id="taskForm">
+        <label for="description">Aprašymas:</label><br>
+        <textarea id="description" name="description" rows="4" cols="50" required></textarea><br><br>
+
+        <label for="dueDate">Data:</label><br>
+        <input type="date" id="dueDate" name="dueDate" required><br><br>
+
+        <label for="group">Grupė:</label><br>
+        <select id="group" name="group">
+            <option value="A">Group A</option>
+            <option value="B">Group B</option>
+            <option value="C">Group C</option>
+        </select><br><br>
+
+        <button type="submit">Pridėti užduotį</button>
+    </form>
+
+    <div id="message"></div> <br>
+
+    <table id="taskList">
+        <thead>
+            <tr>
+                <th>Aprašymas</th>
+                <th>Data</th>
+                <th>Grupė</th>
+                <th>Atlikta</th>
+                <th>Veiksmai</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+<!-- Sukurti užduočių valdymo sistemą.
+1. Aplikacija turi turėti keturis mygtukus: ALL, Group A, Group B, Group C.
+2. By default, užkrovus aplikaciją turi matytis visas bendras visų grupių užduočių sąrašas (ALL).
+3. Paspaudus vieną iš grupių mygtukų, turi rodyti tik tos grupės užduotis.
+4. By default visos užduotys turi būti rikiuojamos nuo artimiausios datos iki vėliausios.
+5. Duomenų įvedimo formoje turi būti: užduoties apibūdinimas/aprašymas, data, kada užduotis turi būti priskirta/atlikta, select dropdown, kur galima pasirinkti ir priskirti grupę.
+6. Duomenų bazės lentelėje turi būti tokie laukeliai: id (generuojami automatiškai), užduoties apibūdinimas/aprašymas, užduoties priskyrimo/atlikimo data, grupės numeris/pavadinimas, ar užduotis atlikta ar dar ne.
+7. Duomenys turi būti atvaizduojami: užduotis apibūdinimas, priskyrimo/atlikimo data, checkbox, kurį galima pažymėti, jei užduotis atlikta (pažymėjus checkbox turi pasikeisti stilius- užduotis papilkėti ar nusibraukti), turi būti edit ir delete mygtukai.
+8. Būtina input laukų validacija ir pranešimai vartotojui: apie įrašytus duomenis, apie ištrintus duomenis ir t.t.

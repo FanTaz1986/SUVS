@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS tasksdb;
+
+USE tasksdb;
+
+CREATE TABLE IF NOT EXISTS tasks (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    description TEXT NOT NULL,
+    dueDate DATE NOT NULL,
+    task_group VARCHAR(1) NOT NULL,
+    completed BOOLEAN NOT NULL DEFAULT false
+);

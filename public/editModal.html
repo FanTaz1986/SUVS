@@ -1,0 +1,22 @@
+<div class="edit-modal">
+    <h2>Redaguoti užduotį</h2>
+    <label for="editDescription">Aprašymas:</label>
+    <textarea id="editDescription" rows="4"></textarea>
+
+    <label for="editDueDate">Data:</label>
+    <input type="date" id="editDueDate">
+
+    <label for="editGroup">Grupė:</label>
+    <select id="editGroup">
+        <option value="A">Group A</option>
+        <option value="B">Group B</option>
+        <option value="C">Group C</option>
+    </select>
+
+    <div class="modal-buttons">
+        <button id="saveEditBtn">Išsaugoti</button>
+        <button id="cancelEditBtn">Atšaukti</button>
+    </div>
+    <input type="hidden" id="taskId" name="taskId">
+    <input type="checkbox" id="completed" name="completed"><label for="completed">Completed</label><br><br>
+</div>
